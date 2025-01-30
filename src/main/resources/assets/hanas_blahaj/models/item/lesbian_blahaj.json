@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hanas_blocks:item/lesbian_blahaj"
+    "layer0": "hanas_blahaj:item/lesbian_blahaj"
   },
   "display": {
     "firstperson_lefthand": {

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "hanas_blocks:item/neon_pink_blahaj"
+    "layer0": "hanas_blahaj:item/neon_pink_blahaj"
   },
   "display": {
     "firstperson_lefthand": {
