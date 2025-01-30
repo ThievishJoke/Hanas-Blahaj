@@ -25,7 +25,7 @@ public class ModLootModifier {
             if (LOOT_LOCATIONS.contains(id)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .with(TagEntry.builder(ModTags.Items.BLAHAJ).weight(5))
+                        .with(TagEntry.builder(ModTags.Items.PRIDE_BLAHAJ).weight(5))
                         .build();
 
                 tableBuilder.pool(pool);
