@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "hanas_blahaj",
+  "version": "${version}",
+  "name": "Hanas Blahaj",
+  "description": "Adds cute Blåhaj to Minecraft!",
+  "authors": ["BaLLducked"],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/hanas_blahaj/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.hana.hanas_blahaj.client.HanasBlahajClient"
+    ],
+    "main": [
+      "net.hana.hanas_blahaj.HanasBlahaj"
+    ],
+    "fabric-datagen": [
+      "net.hana.hanas_blahaj.HanasBlahajDataGenerator"
+    ]
+  },
+  "mixins": [
+    "hanas_blahaj.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

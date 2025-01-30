@@ -1,0 +1,61 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "colored_blahaj",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_dye"
+    },
+    [
+      {
+        "item": "hanas_blahaj:white_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:orange_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:magenta_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:light_blue_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:yellow_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:lime_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:pink_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:gray_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:light_gray_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:purple_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:blahaj"
+      },
+      {
+        "item": "hanas_blahaj:brown_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:green_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:red_blahaj"
+      },
+      {
+        "item": "hanas_blahaj:black_blahaj"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "hanas_blahaj:cyan_blahaj"
+  }
+}
