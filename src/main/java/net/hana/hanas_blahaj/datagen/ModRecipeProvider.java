@@ -22,15 +22,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         super(output, registriesFuture);
     }
 
-    public static CraftingRecipeJsonBuilder createBlahajRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+    public static CraftingRecipeJsonBuilder createBlahajRecipe(ItemConvertible output, ItemConvertible input) {
         return ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output, 1)
                 .input('W', ItemTags.WOOL)
                 .input('S', Items.STRING)
                 .input('D', input)
                 .pattern(" W ")
                 .pattern("WSW")
-                .pattern("DW ")
-                .criterion(hasItem(input), conditionsFromItem(input));
+                .pattern("DW ");
     }
 
     @Override
@@ -54,27 +53,75 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 Items.WHITE_DYE
         );
         List<Item> colored_blahaj_list = List.of(
-                ModItems.WHITE_BLAHAJ,
-                ModItems.ORANGE_BLAHAJ,
-                ModItems.MAGENTA_BLAHAJ,
-                ModItems.LIGHT_BLUE_BLAHAJ,
-                ModItems.YELLOW_BLAHAJ,
-                ModItems.LIME_BLAHAJ,
-                ModItems.PINK_BLAHAJ,
-                ModItems.GRAY_BLAHAJ,
-                ModItems.LIGHT_GRAY_BLAHAJ,
-                ModItems.CYAN_BLAHAJ,
-                ModItems.PURPLE_BLAHAJ,
+                ModItems.BLACK_BLAHAJ,
                 ModItems.BLAHAJ,
                 ModItems.BROWN_BLAHAJ,
+                ModItems.CYAN_BLAHAJ,
+                ModItems.GRAY_BLAHAJ,
                 ModItems.GREEN_BLAHAJ,
+                ModItems.LIGHT_BLUE_BLAHAJ,
+                ModItems.LIGHT_GRAY_BLAHAJ,
+                ModItems.LIME_BLAHAJ,
+                ModItems.MAGENTA_BLAHAJ,
+                ModItems.ORANGE_BLAHAJ,
+                ModItems.PINK_BLAHAJ,
+                ModItems.PURPLE_BLAHAJ,
                 ModItems.RED_BLAHAJ,
-                ModItems.BLACK_BLAHAJ
+                ModItems.YELLOW_BLAHAJ,
+                ModItems.WHITE_BLAHAJ
         );
 
-        for (int i = 0; i < dye_list.size(); i++) {
-            createBlahajRecipe(exporter, colored_blahaj_list.get(i), dye_list.get(i));
-        }
+        createBlahajRecipe(ModItems.BLACK_BLAHAJ, Items.BLACK_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.BLAHAJ, Items.BLUE_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.BROWN_BLAHAJ, Items.BROWN_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.CYAN_BLAHAJ, Items.CYAN_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+
+        createBlahajRecipe(ModItems.GRAY_BLAHAJ, Items.GRAY_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.GREEN_BLAHAJ, Items.GREEN_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.LIGHT_BLUE_BLAHAJ, Items.LIGHT_BLUE_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.LIGHT_GRAY_BLAHAJ, Items.LIGHT_GRAY_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+
+        createBlahajRecipe(ModItems.LIME_BLAHAJ, Items.LIME_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.MAGENTA_BLAHAJ, Items.MAGENTA_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.ORANGE_BLAHAJ, Items.ORANGE_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.PINK_BLAHAJ, Items.PINK_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);;
+
+        createBlahajRecipe(ModItems.PURPLE_BLAHAJ, Items.PURPLE_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.RED_BLAHAJ, Items.RED_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.YELLOW_BLAHAJ, Items.YELLOW_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
+        createBlahajRecipe(ModItems.WHITE_BLAHAJ, Items.WHITE_DYE)
+                .criterion(hasItem(Items.STRING), conditionsFromItem(Items.STRING))
+                .offerTo(exporter);
 
         offerDyeableRecipes(exporter, dye_list, colored_blahaj_list, "colored_blahaj");
     }
