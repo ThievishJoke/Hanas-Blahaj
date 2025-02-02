@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:orange_dye"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    " W ",
+    "WSW",
+    "DW "
+  ],
+  "result": {
+    "item": "hanas_blahaj:orange_blahaj"
+  },
+  "show_notification": true
+}

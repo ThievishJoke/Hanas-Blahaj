@@ -1,6 +1,6 @@
 package net.hana.hanas_blahaj.datagen;
 
-import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.hana.hanas_blahaj.item.ModItems;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
@@ -19,8 +19,8 @@ public class ModLootModifier {
 
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(WOODLAND_MANSION_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(WOODLAND_MANSION_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
@@ -40,8 +40,8 @@ public class ModLootModifier {
             }
         });
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(BURIED_TREASURE_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(BURIED_TREASURE_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
@@ -61,8 +61,8 @@ public class ModLootModifier {
             }
         });
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(ABANDONED_MINESHAFT_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(ABANDONED_MINESHAFT_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
@@ -82,8 +82,8 @@ public class ModLootModifier {
             }
         });
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(SHIPWRECK_TREASURE_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(SHIPWRECK_TREASURE_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
@@ -103,8 +103,8 @@ public class ModLootModifier {
             }
         });
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(END_CITY_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(END_CITY_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
@@ -124,8 +124,8 @@ public class ModLootModifier {
             }
         });
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(ANCIENT_CITY_LOOT)) {
+        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            if (id.equals(ANCIENT_CITY_LOOT)) {
                 LootPool pool = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
