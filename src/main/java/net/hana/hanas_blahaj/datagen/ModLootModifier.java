@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.hana.hanas_blahaj.item.ModItems;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
 
 
@@ -22,8 +22,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(WOODLAND_MANSION_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
@@ -43,8 +44,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(BURIED_TREASURE_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
@@ -64,8 +66,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(ABANDONED_MINESHAFT_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
@@ -85,8 +88,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(SHIPWRECK_TREASURE_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
@@ -106,8 +110,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(END_CITY_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
@@ -127,8 +132,9 @@ public class ModLootModifier {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             if (key.getValue().equals(ANCIENT_CITY_LOOT)) {
                 LootPool pool = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
+                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
                         .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))

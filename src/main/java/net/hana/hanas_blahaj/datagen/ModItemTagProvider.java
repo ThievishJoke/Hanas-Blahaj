@@ -35,6 +35,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.NEON_PINK_BLAHAJ)
         
                 .add(ModItems.PRIDE_BLAHAJ)
+                .add(ModItems.INTERSEX_BLAHAJ)
                 .add(ModItems.TRANSGENDER_BLAHAJ)
                 .add(ModItems.DEMIBOY_BLAHAJ)
                 .add(ModItems.DEMIGIRL_BLAHAJ)
@@ -47,6 +48,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.BISEXUAL_BLAHAJ);
         getOrCreateTagBuilder(ModTags.Items.PRIDE_BLAHAJ)
                 .add(ModItems.PRIDE_BLAHAJ)
+                .add(ModItems.INTERSEX_BLAHAJ)
                 .add(ModItems.TRANSGENDER_BLAHAJ)
                 .add(ModItems.DEMIBOY_BLAHAJ)
                 .add(ModItems.DEMIGIRL_BLAHAJ)

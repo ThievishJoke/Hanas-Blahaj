@@ -31,6 +31,7 @@ public class ModItems {
 
     //pride blahaj
     public static final Item PRIDE_BLAHAJ = registerItem("pride_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
+    public static final Item INTERSEX_BLAHAJ = registerItem("intersex_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item TRANSGENDER_BLAHAJ = registerItem("transgender_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item DEMIBOY_BLAHAJ = registerItem("demiboy_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item DEMIGIRL_BLAHAJ = registerItem("demigirl_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
