@@ -34,6 +34,7 @@ public class ModdItemGroups {
                         entries.add(ModItems.NEON_PINK_BLAHAJ);
 
                         entries.add(ModItems.PRIDE_BLAHAJ);
+                        entries.add(ModItems.INTERSEX_BLAHAJ);
                         entries.add(ModItems.TRANSGENDER_BLAHAJ);
                         entries.add(ModItems.DEMIBOY_BLAHAJ);
                         entries.add(ModItems.DEMIGIRL_BLAHAJ);
