@@ -59,5 +59,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.GAY_BLAHAJ)
                 .add(ModItems.PANSEXUAL_BLAHAJ)
                 .add(ModItems.BISEXUAL_BLAHAJ);
+        getOrCreateTagBuilder(ModTags.Items.OTHER_PLUSHIES)
+                .add(ModItems.DJUNGELSKOG)
+                .add(ModItems.SKOGSDUVA)
+        ;
     }
 }

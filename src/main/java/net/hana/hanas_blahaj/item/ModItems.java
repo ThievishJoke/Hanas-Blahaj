@@ -43,6 +43,10 @@ public class ModItems {
     public static final Item PANSEXUAL_BLAHAJ = registerItem("pansexual_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
     public static final Item BISEXUAL_BLAHAJ = registerItem("bisexual_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
 
+    // Others
+    public static final Item DJUNGELSKOG = registerItem("djungelskog", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
+    public static final Item SKOGSDUVA = registerItem("skogsduva", new Item(new Item.Settings().maxCount(1).rarity(Rarity.EPIC)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(HanasBlahaj.MOD_ID, name), item);
     }

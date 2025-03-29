@@ -35,6 +35,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -57,6 +59,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -79,6 +83,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -101,6 +107,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -123,6 +131,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);
@@ -145,6 +155,8 @@ public class ModLootModifier {
                         .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
                         .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
+                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
+                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
                         .build();
 
                 tableBuilder.pool(pool);

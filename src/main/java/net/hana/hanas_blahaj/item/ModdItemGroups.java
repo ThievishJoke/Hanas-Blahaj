@@ -10,7 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModdItemGroups {
-    public static final ItemGroup BLAHAJ = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup PLUSHIES = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(HanasBlahaj.MOD_ID, "blahaj"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.blahaj"))
                     .icon(() -> new ItemStack(ModItems.BLAHAJ)).entries((displayContext, entries) -> {
@@ -45,6 +45,9 @@ public class ModdItemGroups {
                         entries.add(ModItems.GAY_BLAHAJ);
                         entries.add(ModItems.PANSEXUAL_BLAHAJ);
                         entries.add(ModItems.BISEXUAL_BLAHAJ);
+
+                        entries.add(ModItems.DJUNGELSKOG);
+                        entries.add(ModItems.SKOGSDUVA);
 
                     }).build());
 
