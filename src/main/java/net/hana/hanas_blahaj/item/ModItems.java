@@ -9,6 +9,7 @@ import net.minecraft.util.Rarity;
 
 public class ModItems {
 
+    //todo asexual, aromantic, demi-sexual and demi-romantic
     public static final Item WHITE_BLAHAJ = registerItem("white_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.COMMON)));
     public static final Item ORANGE_BLAHAJ = registerItem("orange_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.COMMON)));
     public static final Item MAGENTA_BLAHAJ = registerItem("magenta_blahaj", new Item(new Item.Settings().maxCount(1).rarity(Rarity.COMMON)));
