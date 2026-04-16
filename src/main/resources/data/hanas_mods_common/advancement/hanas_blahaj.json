@@ -1,0 +1,17 @@
+{
+  "display": {
+    "title": "Hanas Plushies",
+    "description": "Adds Cute Plushies!",
+    "icon": {
+      "id": "hanas_blahaj:blahaj"
+    },
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "hanas_mods_common:root",
+  "criteria": {
+    "trigger": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
