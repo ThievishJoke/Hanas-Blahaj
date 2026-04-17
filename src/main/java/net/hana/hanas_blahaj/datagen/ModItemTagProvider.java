@@ -45,7 +45,26 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.LESBIAN_BLAHAJ)
                 .add(ModItems.GAY_BLAHAJ)
                 .add(ModItems.PANSEXUAL_BLAHAJ)
-                .add(ModItems.BISEXUAL_BLAHAJ);
+                .add(ModItems.BISEXUAL_BLAHAJ)
+        ;
+        getOrCreateTagBuilder(ModTags.Items.COLORED_BLAHAJ)
+                .add(ModItems.BLACK_BLAHAJ)
+                .add(ModItems.BLAHAJ)
+                .add(ModItems.BROWN_BLAHAJ)
+                .add(ModItems.CYAN_BLAHAJ)
+                .add(ModItems.GRAY_BLAHAJ)
+                .add(ModItems.GREEN_BLAHAJ)
+                .add(ModItems.LIGHT_BLUE_BLAHAJ)
+                .add(ModItems.LIGHT_GRAY_BLAHAJ)
+                .add(ModItems.LIME_BLAHAJ)
+                .add(ModItems.MAGENTA_BLAHAJ)
+                .add(ModItems.ORANGE_BLAHAJ)
+                .add(ModItems.PINK_BLAHAJ)
+                .add(ModItems.PURPLE_BLAHAJ)
+                .add(ModItems.RED_BLAHAJ)
+                .add(ModItems.YELLOW_BLAHAJ)
+                .add(ModItems.WHITE_BLAHAJ)
+        ;
         getOrCreateTagBuilder(ModTags.Items.PRIDE_BLAHAJ)
                 .add(ModItems.PRIDE_BLAHAJ)
                 .add(ModItems.INTERSEX_BLAHAJ)
@@ -58,10 +77,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
                 .add(ModItems.LESBIAN_BLAHAJ)
                 .add(ModItems.GAY_BLAHAJ)
                 .add(ModItems.PANSEXUAL_BLAHAJ)
-                .add(ModItems.BISEXUAL_BLAHAJ);
+                .add(ModItems.BISEXUAL_BLAHAJ)
+        ;
         getOrCreateTagBuilder(ModTags.Items.OTHER_PLUSHIES)
                 .add(ModItems.DJUNGELSKOG)
                 .add(ModItems.SKOGSDUVA)
+        ;
+        getOrCreateTagBuilder(ModTags.Items.ALL_PLUSHIES)
+                .addTag(ModTags.Items.BLAHAJ)
+                .addTag(ModTags.Items.PRIDE_BLAHAJ)
+                .addTag(ModTags.Items.OTHER_PLUSHIES)
         ;
     }
 }

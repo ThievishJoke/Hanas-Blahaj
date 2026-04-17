@@ -1,11 +1,14 @@
 package net.hana.hanas_blahaj.datagen;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
-import net.hana.hanas_blahaj.item.ModItems;
+import net.hana.hanas_blahaj.util.ModLists;
 import net.minecraft.loot.LootPool;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
 
 
 public class ModLootModifier {
@@ -17,149 +20,31 @@ public class ModLootModifier {
     private static final Identifier END_CITY_LOOT = Identifier.of("minecraft", "chests/end_city_treasure");
     private static final Identifier ANCIENT_CITY_LOOT = Identifier.of("minecraft", "chests/ancient_city");
 
+    List<Identifier> lootTables = List.of(
+            WOODLAND_MANSION_LOOT,
+            BURIED_TREASURE_LOOT,
+            ABANDONED_MINESHAFT_LOOT,
+            SHIPWRECK_TREASURE_LOOT,
+            END_CITY_LOOT,
+            ANCIENT_CITY_LOOT
+    );
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(WOODLAND_MANSION_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
 
-                tableBuilder.pool(pool);
-            }
-        });
+            if (new ModLootModifier().lootTables.contains(key.getValue())) {
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(BURIED_TREASURE_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(UniformLootNumberProvider.create(0.0f, 1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.40f))
+                        ;
 
-                tableBuilder.pool(pool);
-            }
-        });
+                // Flatten lists
+                ModLists.lootplush_list.stream()
+                        .flatMap(List::stream)
+                        .forEach(plushie -> poolBuilder.with(ItemEntry.builder(plushie).weight(2)));
 
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(ABANDONED_MINESHAFT_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
-
-                tableBuilder.pool(pool);
-            }
-        });
-
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(SHIPWRECK_TREASURE_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
-
-                tableBuilder.pool(pool);
-            }
-        });
-
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(END_CITY_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
-
-                tableBuilder.pool(pool);
-            }
-        });
-
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            if (key.getValue().equals(ANCIENT_CITY_LOOT)) {
-                LootPool pool = LootPool.builder()
-                        .rolls(UniformLootNumberProvider.create(0F, 1.0F))
-                        .with(ItemEntry.builder(ModItems.PRIDE_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.INTERSEX_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.TRANSGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIBOY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DEMIGIRL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GENDERFLUID_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.NON_BINARY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.POLYGENDER_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.LESBIAN_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.GAY_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.PANSEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.BISEXUAL_BLAHAJ).weight(2))
-                        .with(ItemEntry.builder(ModItems.DJUNGELSKOG).weight(2))
-                        .with(ItemEntry.builder(ModItems.SKOGSDUVA).weight(2))
-                        .build();
-
-                tableBuilder.pool(pool);
+                tableBuilder.pool(poolBuilder);
             }
         });
     }

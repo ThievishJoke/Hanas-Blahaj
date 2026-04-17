@@ -8,12 +8,16 @@ import static net.hana.hanas_blahaj.HanasBlahaj.MOD_ID;
 
 public class ModTags {
     public static class Items {
+        public static final TagKey<Item> COLORED_BLAHAJ =
+                createTag("colored_blahaj");
         public static final TagKey<Item> BLAHAJ =
                     createTag("blahaj");
         public static final TagKey<Item> PRIDE_BLAHAJ =
                 createTag("pride_blahaj");
         public static final TagKey<Item> OTHER_PLUSHIES =
                 createTag("other_plushies");
+        public static final TagKey<Item> ALL_PLUSHIES =
+                createTag("all_plushies");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
         }

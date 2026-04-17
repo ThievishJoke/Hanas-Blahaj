@@ -1,11 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_needed_dye": {
+    "has_blahaj": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:light_blue_dye"
+            "items": "#hanas_blahaj:colored_blahaj"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:green_dye"
           }
         ]
       },
@@ -13,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dye_light_blue_blahaj"
+        "recipe": "minecraft:dye_green_blahaj"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +31,13 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_needed_dye"
+      "has_dye",
+      "has_blahaj"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dye_light_blue_blahaj"
+      "minecraft:dye_green_blahaj"
     ]
   }
 }

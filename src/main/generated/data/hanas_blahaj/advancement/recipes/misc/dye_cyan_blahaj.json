@@ -1,7 +1,17 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_needed_dye": {
+    "has_blahaj": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#hanas_blahaj:colored_blahaj"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dye": {
       "conditions": {
         "items": [
           {
@@ -21,7 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_needed_dye"
+      "has_dye",
+      "has_blahaj"
     ]
   ],
   "rewards": {

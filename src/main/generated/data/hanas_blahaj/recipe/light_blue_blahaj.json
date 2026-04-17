@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "colored_blahaj",
   "key": {
     "D": {
       "item": "minecraft:light_blue_dye"
